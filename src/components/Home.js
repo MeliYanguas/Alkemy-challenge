@@ -1,4 +1,5 @@
 /* eslint-disable no-alert */
+/* eslint-disable */
 import React, { useState } from 'react';
 import axios from 'axios';
 import Card from './Card';
@@ -107,6 +108,41 @@ const Home = () => {
   // eslint-disable-next-line no-console
   console.log(powerstats);
 
+  // let {intelligence, strength, speed, durability, power, combat}= powerstats
+
+  console.log(powerstats);
+
+  let sumaIntelligence = 0;
+  let sumaStrength = 0;
+  let sumaSpeed = 0;
+  let sumaDurability = 0;
+  let sumaPower = 0;
+  let sumaCombat = 0;
+
+  if (group >= 6) {
+    for (let i = 0; i < 6; i++) {
+      sumaIntelligence += parseInt(powerstats[i].intelligence);
+      sumaStrength += parseInt(powerstats[i].strength);
+      sumaSpeed += parseInt(powerstats[i].speed);
+      sumaDurability += parseInt(powerstats[i].durability);
+      sumaPower += parseInt(powerstats[i].power);
+      sumaCombat += parseInt(powerstats[i].sumaCombat);
+    }
+
+    const equipoEs = Math.max(
+      sumaIntelligence,
+      sumaStrength,
+      sumaSpeed,
+      sumaDurability,
+      sumaPower,
+      sumaCombat,
+    );
+    console.log('el equipo es');
+    console.log(equipoEs);
+  } else {
+    console.log('nada');
+  }
+
   return (
     <div>
       <div className="searchBar">
@@ -117,7 +153,11 @@ const Home = () => {
           onChange={handleSearch}
           value={searchTerm}
         />
-        <button type="button" className="btn btn-success" onClick={handleSubmit}>
+        <button
+          type="button"
+          className="btn btn-success"
+          onClick={handleSubmit}
+        >
           Buscar
         </button>
       </div>
@@ -154,7 +194,11 @@ const Home = () => {
         {requestSuccessfully ? (
           <div className="container">
             {/* eslint-disable-next-line eqeqeq */}
-            {heroesResults != '' ? <h3 className="mt-5 mb-2">Resultados:</h3> : ''}
+            {heroesResults != '' ? (
+              <h3 className="mt-5 mb-2">Resultados:</h3>
+            ) : (
+              ''
+            )}
             <div className="d-flex justify-content-center row">
               {heroesResults.map((hero) => (
                 <Card

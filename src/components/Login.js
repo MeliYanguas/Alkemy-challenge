@@ -13,7 +13,7 @@ import "./css/Login.css";
 const Login = () => {
   const history = useHistory();
 
-  const [isLogged, setIsLogged] = useState(true);
+  const [isLogged, setIsLogged] = useState(false);
 
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
