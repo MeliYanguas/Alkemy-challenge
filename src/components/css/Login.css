@@ -1,0 +1,44 @@
+/* LOGIN -------------------- */
+.login{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Anton', sans-serif;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+     
+}
+
+
+#email, #password  {
+    appearance: none;
+    background:none;
+    border: none;
+    outline: none;
+    margin-left: 10px;
+    color: rgb(240, 238, 238);
+    border-bottom: white solid 2px;
+}
+
+.email, .password{
+    text-align: left;
+}
+
+form{
+   padding: 30px;
+   border-radius: 10px;
+   color: white;
+}
+
+form h2{
+    font-size: 30px;
+    font-weight: 500;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+    letter-spacing: 5pt;
+}
+form input{
+    margin-bottom: 20px;
+}

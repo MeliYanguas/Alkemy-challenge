@@ -1,0 +1,61 @@
+
+img:hover {
+  cursor: pointer;
+}
+
+.logout {
+  margin-left: auto;
+}
+/* CARDS -------------------------- */
+.card {
+  border: none;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+  margin: 5px;
+  padding: 0;
+  background-image: linear-gradient(to bottom right, #1A2739, white);
+
+  font-family: 'Anton', sans-serif;
+  color: #0e1927;
+  
+}
+
+.card button {
+    background-color: #e0e5eb;
+    
+
+    font-size: 10px;
+    font-weight: 800;
+}
+
+
+@media only screen and (max-width: 600px) {
+    body {
+      background-color: lightblue;
+    }
+  }
+
+  /* ------------ */
+
+
+.searchBar{
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+
+    
+    
+}
+.searchBar .btn{
+    border-radius: 0% 5% 5% 0%;
+    margin-left: 5px;
+}
+.textField{
+    border-radius: 0;
+    width: 300px;
+}
+
+/* ------------------- */
+.details{
+    font-size: 15px;
+    font-weight: 100;
+}
