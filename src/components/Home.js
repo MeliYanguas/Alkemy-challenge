@@ -112,36 +112,7 @@ const Home = () => {
 
   console.log(powerstats);
 
-  let sumaIntelligence = 0;
-  let sumaStrength = 0;
-  let sumaSpeed = 0;
-  let sumaDurability = 0;
-  let sumaPower = 0;
-  let sumaCombat = 0;
-
-  if (group >= 6) {
-    for (let i = 0; i < 6; i++) {
-      sumaIntelligence += parseInt(powerstats[i].intelligence);
-      sumaStrength += parseInt(powerstats[i].strength);
-      sumaSpeed += parseInt(powerstats[i].speed);
-      sumaDurability += parseInt(powerstats[i].durability);
-      sumaPower += parseInt(powerstats[i].power);
-      sumaCombat += parseInt(powerstats[i].sumaCombat);
-    }
-
-    const equipoEs = Math.max(
-      sumaIntelligence,
-      sumaStrength,
-      sumaSpeed,
-      sumaDurability,
-      sumaPower,
-      sumaCombat,
-    );
-    console.log('el equipo es');
-    console.log(equipoEs);
-  } else {
-    console.log('nada');
-  }
+  
 
   return (
     <div>
